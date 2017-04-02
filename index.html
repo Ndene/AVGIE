@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<title>Apréva</title>
+	<meta name="description" content="Application de gestion de décés by AngularJS and Boostrap">
+    <meta name="author" content="Papa Ndene">
+     <link rel="shortcut icon" href="img/favicon.ico">
+	<!-- build:css({.tmp,app}) css/all.css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+   	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<div class="container "><!-- Container for Menu -->
+
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>				
+				</button>
+				<a class="navbar-brand" href="#">Apréva</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#accueil">Accueil</a></li>
+					<li><a href="#relances">Relances</a></li>
+					<li><a href="#relances">Rêquetes</a></li>
+					<li><a href="#relances">Paramètres</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</nav>
+
+		<div ng-view></div>
+
+	</div><!-- /container main-->
+
+<!-- build:js({.tmp,app}) scripts/angular.js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/jquery.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/jquery.js -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/elastic.js -->
+<script src="bower_components/elasticsearch/elasticsearch.angular.js">
+</script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/application.js -->
+<script src="src/app.js"></script>
+<script src="routing.js"></script>
+<!-- Services -->
+<script src="src/services/accueilProvider.js"></script>
+<script src="src/services/authentificationProvider.js"></script>
+<!-- Controllers -->
+<script src="src/controllers/accueilCtrl.js"></script>
+<script src="src/controllers/loginCtrl.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

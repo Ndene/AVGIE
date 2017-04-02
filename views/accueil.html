@@ -1,0 +1,105 @@
+<form class="form-horizontal well">
+    <div class="form-group">
+        <div ng-hide="isAvailableResults()">
+            <div class="row text-center hidden-xs">
+                <img src="img/musicbrainz.png" alt="MusicBrainz Logo" /><br/>
+                <br/>
+            </div>
+        </div>
+        <label id="search-input-label" class="col-sm-3 control-label" ng-bind="translation.SEARCH_LABEL">Searching a music album</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control"  placeholder="{{translation.SEARCH_PLACEHOLDER}}" ng-model="searchText"
+                   typeahead="album for album in autocomplete($viewValue) | filter:$viewValue" />
+        </div>
+        <div class="col-sm-1">
+            <button type="submit" class="btn btn-primary" ng-click="fullTextSearch(searchText, 1)" ng-bind="translation.SEARCH_BUTTON">MusicBrainz Search</button>
+        </div>
+    </div>
+</form>
+
+
+<form class="form-search">
+	<label>Identifiant</label>
+  	<input type="text" class="input-mini search-query">
+  	<label>Nom</label>
+	<input type="text" class="input-mini search-query">
+	<label>Prénom</label>
+	<input type="text" class="input-mini search-query">
+	<label>N° Sécu</label>
+	<input type="text" class="input-mini search-query">
+	<label>Date de Naissance</label>
+	<input type="text" class="input-mini search-query">
+	<label>Date de Décés</label>
+	<input type="text" class="input-mini search-query">
+
+  <button type="submit" class="btn">Search</button>
+</form>
+<table class="table table-striped table-hover">
+	<thead>
+		<th></th>
+		<th>Date position<br>décés Prénium</th>
+		<th>N° adérent </th>
+		<th>Nom</th>
+		<th>Prénom</th>
+		<th>Code Acte</th>
+		<th>Code Produit</th>
+		<th>Assureur</th>
+		<th>Date décés</th>
+		<th>Age du décés</th>
+		<th>Prise en en charge<br> OUI/NON</th>
+		<th>Dossier en garantie receptionnée</th>
+		<th>Exclusion</th>
+	</thead>
+	<tbody>
+		<tr class="clickable">
+			<td></td>
+			<td>07/02/2017</td>
+			<td>32564</td>
+			<td>robert</td>
+			<td>lucie</td>
+			<td>caobs</td>
+			<td>idcz40</td>
+			<td></td>
+			<td>27/02/2017</td>
+			<td>91</td>
+			<td><input type="checkbox"></td>
+			<td> <input type="checkbox"></td>
+			<td> <input type="checkbox"></td>	
+		</tr>
+		<tr class="clickable">
+			<td></td>
+			<td>07/02/2017</td>
+			<td>32564</td>
+			<td>robert</td>
+			<td>lucie</td>
+			<td>caobs</td>
+			<td>idcz40</td>
+			<td></td>
+			<td>27/02/2017</td>
+			<td>91</td>
+			<td> <input type="checkbox"></td>
+			<td> <input type="checkbox"></td>
+			<td> <input type="checkbox"></td>	
+		</tr>
+		<tr class="clickable">
+			<td></td>
+			<td>07/02/2017</td>
+			<td>32564</td>
+			<td>robert</td>
+			<td>lucie</td>
+			<td>caobs</td>
+			<td>idcz40</td>
+			<td></td>
+			<td>27/02/2017</td>
+			<td>91</td>
+			<td> <input type="checkbox"></td>
+			<td> <input type="checkbox"></td>
+			<td> <input type="checkbox"></td>
+		</tr>
+	</tbody>	
+</table>
+	</div>
+</div>
+
+
+
